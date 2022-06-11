@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class gameOver : MonoBehaviour
+public class Restart : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,13 +15,4 @@ public class gameOver : MonoBehaviour
     {
         
     }
-
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.name == "Game over")
-        {
-            SceneManager.LoadScene("Game Over");
-        }
-    }
 }
- 
