@@ -23,7 +23,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(0, 0, movementSpeed);
         }
@@ -44,9 +44,29 @@ public class PlayerBehaviour : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             hasJump = false;
         }
+
+        if (Input.GetKey(KeyCode.X))
+        {
+            transform.Rotate(0, 0, rotationSpeed);
+        }
+
+        if (Input.GetKey(KeyCode.Z))
+        {
+            transform.Rotate(0, 0, -rotationSpeed);
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(rotationSpeed, 0, 0);
+        }
+
+        if(Input.GetKey(KeyCode.E))
+        {
+            transform.Rotate(-rotationSpeed, 0, 0);
+        }
     }
 
-    void OnCollisionEnter(Collision col)
+            void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "ground")
         {
