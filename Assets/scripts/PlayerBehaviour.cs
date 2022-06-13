@@ -10,7 +10,6 @@ public class PlayerBehaviour : MonoBehaviour
     public float rotationSpeed;
     public float jumpForce;
     public GameObject restart;
-    public Text txtTime;
     bool hasJump;
     Rigidbody rb;
 
@@ -23,8 +22,6 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float elapsedTime = Time.time;
-        txtTime.text = Mathf.Floor(elapsedTime).ToString();
 
         if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow))
         {
