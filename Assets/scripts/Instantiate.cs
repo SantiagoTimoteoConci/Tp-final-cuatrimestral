@@ -16,7 +16,7 @@ public class Instantiate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (num < 120)
+        while (num < 100000000000000000)
         {
             Instantiate(objectToClone);
             num++;
