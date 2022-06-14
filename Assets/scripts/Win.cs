@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
-    public GameObject objectToClone;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +14,7 @@ public class Win : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int counter = 0;
-        while (counter < 3)
-        {
-            Instantiate(objectToClone);
-            counter++;
-        }
+       
     }
 
     void OnCollisionEnter(Collision col)

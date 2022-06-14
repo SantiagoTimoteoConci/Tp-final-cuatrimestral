@@ -5,7 +5,7 @@ using UnityEngine;
 public class Instantiate : MonoBehaviour
 {
     public GameObject objectToClone;
-
+    int num;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +16,10 @@ public class Instantiate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int counter = 0;
-        while (counter < 5)
+        while (num < 120)
         {
             Instantiate(objectToClone);
-            counter++;
         }
     }
 }
+

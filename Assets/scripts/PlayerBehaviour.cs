@@ -10,8 +10,11 @@ public class PlayerBehaviour : MonoBehaviour
     public float rotationSpeed;
     public float jumpForce;
     public GameObject restart;
+    public GameObject Platform;
     bool hasJump;
     Rigidbody rb;
+    public GameObject win;
+    int Num;
 
     // Start is called before the first frame update
     void Start()
@@ -66,11 +69,19 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-            void OnCollisionEnter(Collision col)
-    {
+    void OnCollisionEnter(Collision col) {
+
         if (col.gameObject.tag == "ground")
         {
             hasJump = true;
         }
+
+        if (col.gameObject.tag == "button")
+        {
+            Platform.transform.position += new Vector3(0.1f, 0, 0);
+        }
+
     }
+
+
 }
