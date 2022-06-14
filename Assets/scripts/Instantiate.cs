@@ -19,6 +19,7 @@ public class Instantiate : MonoBehaviour
         while (num < 120)
         {
             Instantiate(objectToClone);
+            num++;
         }
     }
 }
